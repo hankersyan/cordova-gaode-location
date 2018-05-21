@@ -1,7 +1,7 @@
 # cordova-gaode-location V1.0.3
 由于Android Webkit的安全限制，只有Https网站才能访问HTML5的定位功能，
 因此，提供基于高德地图的Android定位插件；iOS使用HTML5定位即可(navigator.geolocation.getCurrentPosition)。
-本分支基于 https://github.com/ww-gh/cordova-gaode-location，并修复了在cordova 7.0编译失败的BUG。
+本分支基于 https://github.com/ww-gh/cordova-gaode-location ，并修复了在cordova 7.0编译失败的BUG。
 
 ## 1、添加插件方式：
 - 直接通过 url 安装：
