@@ -1,21 +1,24 @@
 # cordova-gaode-location V1.0.3
-自定义使用高德SDK进行定位的插件，只支持android端，iOS 用浏览器定位就可以了，而且支持IOS的SDK较大，所以就没添加了；
+由于Android Webkit的安全限制，只有Https网站才能访问HTML5的定位功能，
+因此，提供基于高德地图的Android定位插件；iOS使用HTML5定位即可(navigator.geolocation.getCurrentPosition)。
+本分支基于 https://github.com/ww-gh/cordova-gaode-location，并修复了在cordova 7.0编译失败的BUG。
 
-## 1、高度地图版本介绍：
-AMap_Location_V3.4.1_20170629.jar，请自己到高度地图API官网下载；
-   
-## 2、添加插件方式：
+## 1、添加插件方式：
 - 直接通过 url 安装：
 ```shell
-cordova plugin add https://github.com/ww-gh/cordova-gaode-location.git --variable API_KEY="你在高度官网申请的API_KEY"
+cordova plugin add https://github.com/hankersyan/cordova-gaode-location.git --variable API_KEY="高德的API_KEY"
 ```
-- 或通过 Cordova Plugins 安装，要求 Cordova CLI 5.0+：
-```shell
-cordova plugin add cordova-gaode-location --variable API_KEY="你在高度官网申请的API_KEY"
-```
-> 注意：使用前先到高度官网去申请自己的API Key；
+> 注意：使用前先到高德官网去申请自己的API Key；
 
 ## 3、使用说明：
+- javascript语法
+```javascript
+cordova.plugins.GaoDeLocation.getCurrentPosition(function(resp){
+                    console.log(resp);
+                }, function(err){
+                    console.log(err);
+                });
+```
 - typescript语法
 ```typescript
 cordova.plugins.GaoDeLocation.getCurrentPosition((resp: GaoDeposition) => {
@@ -75,15 +78,6 @@ class ErrorInfo {
      return errInfo;
  }
 ```
-- javascript语法
-```javascript
-cordova.plugins.GaoDeLocation.getCurrentPosition(function(resp){
-                    console.log(resp);
-                }, function(err){
-                    console.log(err);
-                });
-```
 
 ## Support
-- 邮箱：(wangwenxy@163.com)
-- [故障反馈地址：](https://github.com/ww-gh/cordova-gaode-location/issues)
+- [故障反馈地址：](https://github.com/hankersyan/cordova-gaode-location/issues)
