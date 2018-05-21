@@ -1,10 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-gaode-location" version="1.0.3" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-gaode-location" version="1.1.4" 
+	xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android">
     <name>cordova-gaode-location</name>
     <js-module name="cordova-gaode-location" src="www/GaoDeLocation.js">
         <clobbers target="cordova.plugins.GaoDeLocation"/>
     </js-module>
     <preference name="API_KEY"/>
+    <engines>
+        <engine name="cordova-android" version=">=6.4.0" />
+    </engines>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="GaoDeLocation">
@@ -58,6 +63,6 @@
         </config-file>
         <source-file src="src/android/com/easyman/plugin/GaoDeLocation.java"
                      target-dir="src/com/easyman/plugin"/>
-        <source-file src="src/android/libs/AMap_Location_V3.4.1_20170629.jar" target-dir="libs" />
+        <source-file src="src/android/libs/AMap_Location_V3.4.1_20170629.jar" target-dir="app/libs" />
     </platform>
 </plugin>
