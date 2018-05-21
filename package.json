@@ -1,6 +1,6 @@
 {
   "name": "cordova-gaode-location",
-  "version": "1.0.3",
+  "version": "1.1.4",
   "description": "自定义使用高德SDK进行定位的插件，只支持android端，iOS 用浏览器定位就可以了",
   "cordova": {
     "id": "cordova-gaode-location",
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ww-gh/cordova-gaode-location.git"
+    "url": "https://github.com/hankersyan/cordova-gaode-location.git"
   },
   "keywords": [
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": "wangwenxy@163.com",
+  "author": "hankersyan@msn.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ww-gh/cordova-gaode-location/issues"
+    "url": "https://github.com/hankersyan/cordova-gaode-location/issues"
   },
-  "homepage": "https://github.com/ww-gh/cordova-gaode-location#readme"
+  "homepage": "https://github.com/hankersyan/cordova-gaode-location#readme"
 }
